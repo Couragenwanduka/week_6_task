@@ -50,12 +50,12 @@ class AmericanExpress extends CreditCard{
       this.isAmericanExpress=true}  
   }
 }
-const Mastercard= new MasterCard("Ogechukwu Ani","233","30/1/2026","5399 4122 6157 4698");
+const mastercard= new MasterCard("Ogechukwu Ani","233","30/1/2026","5399 4122 6157 4698");
 const visacard= new VisaCard("Mmadu Ugwu","255","26/25/2023","4187 4517 2824 0229","Zenith");
 const americanExpress=new AmericanExpress("obi cubana","444","14/4/2027","3187 4517 2824 029","Nigeria");
-Mastercard.cardValidation("5399 4122 6157 4698");
+mastercard.cardValidation("5399 4122 6157 4698");
 visacard.cardValidation("4187 4517 2824 0229");
 americanExpress.cardValidation("3187 4517 2824 029");
-console.log(Mastercard);
+console.log(mastercard);
 console.log(visacard);
 console.log(americanExpress);
