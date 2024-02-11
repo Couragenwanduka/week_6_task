@@ -4,44 +4,45 @@ This README provides an explanation of the regular expressions (regex patterns) 
 ## Regular Expressions Explained
 # MasterCard
 
-javascript<br>
-/^5[1-5][0-9]{14}$|^2(?:2(?:2[1-9]|[3-9][0-9])|[3-6][0-9][0-9]|7(?:[01][0-9]|20))[0-9]{12}$/
-
+```Javascript
+/^5[1-5][0-9]{14}$|^2(?:2(?:2[1-9]|[3-9][0-9])|[3-6][0-9][0-9]
+|7(?:[01][0-9]|20))[0-9]{12}$/
+```
  ^: Start of the string.<br>
  2|5: MasterCard numbers always start with the digit '5' or'2'.<br>
  \d: Matches any digit.
 
 ## VisaCard
 
-javascript<br>
+```Javascript
 /^3[47][0-9]{13}$/
-
+```
  ^: Start of the string.<br>
  4: Visa card numbers always start with the digit '4'.<br>
  \d: Matches any digit.
 
 ## AmericanExpress
 
-javascript<br>
+```Javascript
 /^3\d{14}/
-
+```
  ^: Start of the string.<br>
  3: American Express card numbers always start with the digit '3'.<br>
  \d: Matches any digit.
 
  ## Discover
  
-javascript <br>
+```Javascript 
 /^6011\d{12}|^65\d{14}/
-
+```
  ^: Start of the string.<br>
  3: discover card numbers always start with the digit '6011' or "65".<br>
  \d: Matches any digit.
 
  ## verve
-javascript<br>
+```javascript
 /^506(0|1)\d{12}$/
-
+```
   ^: Start of the string.<br>
  3:  verve card numbers always start with the digit '3'.<br>
  \d: Matches any digit.
