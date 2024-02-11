@@ -5,8 +5,7 @@ This README provides an explanation of the regular expressions (regex patterns) 
 # MasterCard
 
 ```Javascript
-/^5[1-5][0-9]{14}$|^2(?:2(?:2[1-9]|[3-9][0-9])|[3-6][0-9][0-9]
-|7(?:[01][0-9]|20))[0-9]{12}$/
+/^5[1-5][0-9]{14}$|^2(?:2(?:2[1-9]|[3-9][0-9])|[3-6][0-9][0-9]|7(?:[01][0-9]|20))[0-9]{12}$/
 ```
  ^: Start of the string.<br>
  2|5: MasterCard numbers always start with the digit '5' or'2'.<br>
@@ -47,10 +46,10 @@ This README provides an explanation of the regular expressions (regex patterns) 
  3:  verve card numbers always start with the digit '3'.<br>
  \d: Matches any digit.
  
- ## The luhnCheck function 
+ ## The luhnCheck Function 
  checks whether a given credit card number is valid according to the Luhn algorithm. It iterates through the digits of the card number, doubling every other digit and adjusting for cases where the result is greater than 9. It returns true if the checksum (the sum of all digits) is divisible by 10, indicating a valid card number.
 
-## The cardValidation function 
+## The cardValidation Function 
 takes a card number as input and checks if it's valid based on its pattern and whether it passes the Luhn check. It uses regular expressions to match patterns for different card types: MasterCard, Visa, American Express, Discover, and Verve. If the card number passes the Luhn check and matches a specific pattern, it returns the corresponding card type. If not, it returns "Invalid Card".
 
 ## In the code execution section,
