@@ -40,9 +40,9 @@
   // American Express numbers start with 3 and are 15 digits long
   const americanExpressPattern=/^3\d{3}\s\d{4}\s\d{4}\s\d{3}/;
   // Discover number can start with 65 or 6011 and 16 digits long
-  const Discover= /^6011\d{12}|^65\d{14}/
+  const discoverPattern = /^6011\d{12}|^65\d{14}/
   // verve number can start with 5060 or 5061 and are 16 digits long
-  const verve= /^506(0|1)\d{12}$/
+  const vervePattern = /^506(0|1)\d{12}$/
    
   // Check if the card number matches any of the patterns
   if( luhnCheck(cardNumber)=== true){
@@ -52,6 +52,10 @@
     return "visa Card"
   }else if (americanExpressPattern.test(cardNumber)){
     return "American Express"
+  }else if(discoverPattern.test(cardNumber)){
+   return "Discover Card"
+  }else if (vervePattern.test(cardNumber)){
+   return "Verve card"
   }
 } else{
     return "Invaild Card"
